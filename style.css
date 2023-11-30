@@ -1,0 +1,231 @@
+@media (max-width: 767px) { /* mobile version */
+    :root {
+        --gutter: 1rem; 
+        --navigation-bar-list-visible: hidden;
+        --main-container-flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) { /* PC version */
+    :root {
+        --gutter: 5rem;
+        --navigation-bar-list-visible: visible;
+        --main-container-flex-direction: row;
+    }
+}
+
+/***** elementos HTML *****/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+/***** clases de la cabecera *****/
+
+.header-container {
+    /* flexbox info */
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    /* style info */
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.logo {
+    /*flex-grow: 1;*/
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navigation-bar-list {
+    visibility: var(--navigation-bar-list-visible);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /*flex-grow: 1;*/
+    display: flex;
+    gap: 1rem;
+}
+
+
+/***** clases de la sección principal (oferta) *****/
+
+.main-container {
+    /* flexbox info */
+    display: flex;
+    flex-direction: var(--main-container-flex-direction);
+    gap: 1rem;
+    
+
+    /* style info */
+    padding-top: 2rem;
+    padding-bottom: 1rem; 
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.offer-price {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: baseline;
+}
+
+.offer-features {
+    display: flex;
+    gap: 1rem;
+}
+
+.main-image {
+    max-width: 470px;
+}
+
+.price-label {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.offer-label {
+    color: red;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+
+/***** clases de la sección secundaria (accesorios) *****/
+
+.accesories-container {
+    /* style info */
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.accessories-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.accesory-section {
+    padding: 1rem;
+    border: 1px solid #d3d3d3;
+}
+
+
+/***** clases del formulario (sorteo) *****/
+
+.raffle-container {
+    /* flexbox info */
+    display: flex;
+    gap: 3rem;
+
+    /* style info */
+    background-color: rgb(239, 246, 255);    
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+    padding: 1rem 2rem;
+}
+
+.raffle-form {
+    /* flexbox info */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/***** clases del footer *****/
+
+.footer-brand {
+    padding-top: 1rem;
+    border-top: 1px solid #d3d3d3;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/***** clases genéricas (uso deslocalizado) *****/
+
+.button {
+    background-color: white;
+    padding: 15px 15px;
+    margin: 0px 0px;
+    border: none;
+}
+
+.button.special-button {
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+.button.buy-button {
+    border: 1px solid #0c39b4;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(59, 130, 246);
+}
+
+.button.form-button {
+    border: 1px solid #0c39b4;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(59, 130, 246);
+    max-width: 100px;
+}
+
+.label {
+    margin-bottom: 15px;
+}
+
+.input {
+    /*display: block;*/
+    margin: 5px 0px;
+    height: 30px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+
+
